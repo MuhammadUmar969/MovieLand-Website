@@ -3,7 +3,7 @@ import SearchIcon from './assets/search.svg'
 import MovieCard from './MovieCard';
 //95ac84ac
 
-const API_URL = "http://www.omdbapi.com?apikey=95ac84ac";
+const API_URL = "https://www.omdbapi.com/?i=95ac84ac&apikey=95ac84ac";
 
 // Object of movie app {
 //   "Title": "Avengers: Age of Ultron",
@@ -49,9 +49,10 @@ const App = () => {
         {
           movies.length > 0 ? (
              <div className="container">
-                {movies.map((movie) => (
+                {movies.map((movie, indx) => (
                   <MovieCard 
                     movies = {movie}
+                    key={indx}
                   />
                 ))}
              </div>
